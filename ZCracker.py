@@ -1,6 +1,6 @@
 #ZIP password cracker written in python by MCoury AKA python-scripter
 import zipfile as zf
-from unrar import rarfile as rf
+#from unrar import rarfile as rf
 import pickle
 from itertools import product
 import os
@@ -146,7 +146,7 @@ class CrackRar:
         with open(r'' + dict_path, 'rb') as dict_f:
             content = pickle.load(dict_f)
 
-        r = rf.RarFile(self.file_path)
+        # r = rf.RarFile(self.file_path)
 
         found = []
 
@@ -195,7 +195,7 @@ class CrackRar:
 
         space = self.space_selector[space_n]
 
-        r = rf.RarFile(self.file_path)
+        # r = rf.RarFile(self.file_path)
 
         found = []
 
